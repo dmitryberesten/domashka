@@ -1,0 +1,147 @@
+/* Загальні стилі */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee, #84fab0, #8fd3f4, #ffecd2, #fcb69f);
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease infinite;
+    color: #333;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    25% {
+        background-position: 50% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    75% {
+        background-position: 50% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Стилі для заголовка */
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    margin-top: 20px;
+    color: #4A4A4A;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+/* Стилі для кнопок */
+button {
+    font-size: 1em;
+    padding: 12px 24px;
+    margin: 15px 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #84a5fa, #8fd3f4);
+    color: #fff;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+#verseContainer p {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #333;
+    margin: 10px 0;
+}
+
+#verseContainer em {
+    font-style: italic;
+    color: #555;
+}
+
+/* Стиль для кнопки Отримати Слово */
+#getVerse {
+    font-size: 1.2em;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #f7971e, #ffd200);
+    /* Помаранчево-жовтий градієнт */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#getVerse:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#getVerse:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+#backButton {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+}
+
+.footer-text {
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.footer-text,
+.footer-version {
+    margin: 5px 0;
+}
+
+.footer-text a {
+    color: #444141;
+    font-style: bold;
+    font-weight: 550;
+}
+
+.footer-text a:hover {
+    color: #333;
+    text-decoration: underline;
+}
