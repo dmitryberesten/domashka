@@ -1,16 +1,49 @@
 /* Загальні стилі */
 body {
     font-family: 'Arial', sans-serif;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    background: -o-linear-gradient(315deg, #fbc2eb, #a6c1ee, #84fab0, #8fd3f4, #ffecd2, #fcb69f);
     background: linear-gradient(135deg, #fbc2eb, #a6c1ee, #84fab0, #8fd3f4, #ffecd2, #fcb69f);
     background-size: 200% 200%;
+    -webkit-animation: gradientShift 3s ease infinite;
     animation: gradientShift 3s ease infinite;
     color: #333;
+}
+
+@-webkit-keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    25% {
+        background-position: 50% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    75% {
+        background-position: 50% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 @keyframes gradientShift {
@@ -42,6 +75,7 @@ body {
     border-radius: 12px;
     width: 80%;
     max-width: 400px;
+    -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -64,19 +98,29 @@ button {
     cursor: pointer;
     border: none;
     border-radius: 8px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    background: -o-linear-gradient(315deg, #84a5fa, #8fd3f4);
     background: linear-gradient(135deg, #84a5fa, #8fd3f4);
     color: #fff;
 }
 
 button:hover {
+    -webkit-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
     transform: translateY(-3px);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 button:active {
+    -webkit-transform: translateY(1px);
+    -ms-transform: translateY(1px);
     transform: translateY(1px);
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
@@ -96,27 +140,39 @@ button:active {
 #getVerse {
     font-size: 1.2em;
     padding: 14px 28px;
+    background: -o-linear-gradient(315deg, #f7971e, #ffd200);
     background: linear-gradient(135deg, #f7971e, #ffd200);
     /* Помаранчево-жовтий градієнт */
     color: #fff;
     border: none;
     border-radius: 8px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 #getVerse:hover {
+    -webkit-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
     transform: translateY(-3px);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 #getVerse:active {
+    -webkit-transform: translateY(1px);
+    -ms-transform: translateY(1px);
     transform: translateY(1px);
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
 #backButton {
+    background: -o-linear-gradient(315deg, #f093fb, #f5576c);
     background: linear-gradient(135deg, #f093fb, #f5576c);
+    margin-bottom: 0;
 }
 
 .footer-text {
