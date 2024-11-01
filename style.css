@@ -20,7 +20,7 @@ body {
     background: linear-gradient(135deg, #fbc2eb, #a6c1ee, #84fab0, #8fd3f4, #ffecd2, #fcb69f);
     background-size: 200% 200%;
     -webkit-animation: gradientShift 3s ease infinite;
-    animation: gradientShift 3s ease infinite;
+    animation: gradientShift 5s ease infinite;
     color: #333;
 }
 
