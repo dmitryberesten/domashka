@@ -201,3 +201,9 @@ footer {
     color: #333;
     text-decoration: underline;
 }
+
+#qrImage {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
