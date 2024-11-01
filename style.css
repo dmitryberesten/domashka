@@ -77,6 +77,7 @@ body {
     max-width: 400px;
     -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
 }
 
 /* Стилі для заголовка */
@@ -88,6 +89,7 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 700;
+    text-align: center;
 }
 
 /* Стилі для кнопок */
@@ -206,4 +208,38 @@ footer {
     display: block;
     width: 100%;
     margin: 0 auto;
+}
+
+/* Стили для лоадера */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    z-index: 9999;
+}
+
+.loader-logo {
+    width: 100px;
+    /* Розмір лоадера */
+    animation: scale 1s linear infinite;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1)
+    }
+
+    50% {
+        transform: scale(1.2)
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }

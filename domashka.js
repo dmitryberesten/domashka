@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Приховування лоадера через 3 секунди
+  setTimeout(() => {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("content").style.display = "block";
+  }, 3000);
+
+  // Інші елементи та функції
   const showQrButton = document.getElementById("showQr");
   const getVerseButton = document.getElementById("getVerse");
   const verseContainer = document.getElementById("verseContainer");
