@@ -1,3 +1,56 @@
+/* --- Сучасні стилі для кнопок ігор --- */
+.game-link {
+    display: block;
+    font-size: 1.08em;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+    padding: 16px 0;
+    margin: 0 0 10px 0;
+    border-radius: 14px;
+    border: none;
+    background: linear-gradient(90deg, #a8edea 0%, #282727 100%);
+    color: #3a3a3a;
+    box-shadow: 0 4px 16px rgba(168, 237, 234, 0.15);
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: all 0.25s cubic-bezier(.4,2,.6,1);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+.game-link[data-game="guess-word"] {
+    background: linear-gradient(90deg, #f7971e 0%, #ffd200 100%);
+    color: black;
+}
+.game-link[data-game="alias"] {
+    background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+    color: black;
+}
+.game-link[data-game="bible-quiz"] {
+    background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+    color: black;
+}
+.game-link[data-game="challenge"] {
+    background: linear-gradient(90deg, #30cfd0 0%, #330867 100%);
+    color: black;
+}
+.game-link:hover, .game-link:focus {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(100, 100, 255, 0.18);
+    filter: brightness(1.08);
+    text-decoration: none;
+}
+.game-link:active {
+    transform: scale(0.98);
+    filter: brightness(0.95);
+}
+.game-link::before {
+    content: "\1F3AE "; /* emoji джойстик */
+    font-size: 1.1em;
+    margin-right: 8px;
+    vertical-align: middle;
+}
 /* Загальні стилі */
 body {
     font-family: 'Arial', sans-serif;
