@@ -13,44 +13,54 @@
     box-shadow: 0 4px 16px rgba(168, 237, 234, 0.15);
     text-decoration: none;
     letter-spacing: 0.5px;
-    transition: all 0.25s cubic-bezier(.4,2,.6,1);
+    transition: all 0.25s cubic-bezier(.4, 2, .6, 1);
     position: relative;
     overflow: hidden;
     text-align: center;
     cursor: pointer;
 }
+
 .game-link[data-game="guess-word"] {
     background: linear-gradient(90deg, #f7971e 0%, #ffd200 100%);
     color: black;
 }
+
 .game-link[data-game="alias"] {
     background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
     color: black;
 }
+
 .game-link[data-game="bible-quiz"] {
     background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
     color: black;
 }
+
 .game-link[data-game="challenge"] {
     background: linear-gradient(90deg, #30cfd0 0%, #330867 100%);
     color: black;
 }
-.game-link:hover, .game-link:focus {
+
+.game-link:hover,
+.game-link:focus {
     transform: translateY(-3px) scale(1.04);
     box-shadow: 0 8px 24px rgba(100, 100, 255, 0.18);
     filter: brightness(1.08);
     text-decoration: none;
 }
+
 .game-link:active {
     transform: scale(0.98);
     filter: brightness(0.95);
 }
+
 .game-link::before {
-    content: "\1F3AE "; /* emoji джойстик */
+    content: "\1F3AE ";
+    /* emoji джойстик */
     font-size: 1.1em;
     margin-right: 8px;
     vertical-align: middle;
 }
+
 /* Загальні стилі */
 body {
     font-family: 'Arial', sans-serif;
@@ -120,6 +130,7 @@ body {
         background-position: 0% 50%;
     }
 }
+
 .focus-in-expand-fwd {
     -webkit-animation: focus-in-expand-fwd 1.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: focus-in-expand-fwd 1.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;

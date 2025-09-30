@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
     qrImage.style.display = "none";
     questionContainer.textContent = "";
     nextQuestionButton.style.display = "none";
-  showGamesButton.style.display = "none";
+    showGamesButton.style.display = "none";
   });
 
   // Повернення з ігор у головне меню
@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
     backButton.style.display = "inline-block";
     verseContainer.innerHTML = "";
     qrImage.style.display = "none";
-  showGamesButton.style.display = "none";
+    showGamesButton.style.display = "none";
   });
 
   nextQuestionButton.addEventListener("click", () => {
@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
     qrImage.style.display = "block";
     showQuestionGeneratorButton.style.display = "none";
     toggleButtons(false);
-  showGamesButton.style.display = "none";
+    showGamesButton.style.display = "none";
   });
 
   // Показ випадкового вірша
@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
     qrImage.style.display = "none"; // Сховати QR-код, якщо був відкритий
     showQuestionGeneratorButton.style.display = "none";
     toggleButtons(false);
-  showGamesButton.style.display = "none";
+    showGamesButton.style.display = "none";
   });
 
   // Кнопка "Назад" для повернення на початковий екран
@@ -206,7 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
     showQuestionGeneratorButton.style.display = "inline-block";
     toggleButtons(true);
     gamesSection.style.display = "none";
-  showGamesButton.style.display = "inline-block";
+    showGamesButton.style.display = "inline-block";
     // Заглушки для переходу на ігри (можна замінити на реальні сторінки)
     gameLinks.forEach((link) => {
       link.addEventListener("click", (e) => {
