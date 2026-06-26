@@ -301,7 +301,7 @@ button::before {
 
 /* === GAMES SECTION === */
 #gamesSection {
-    animation: fadeUp 0.35s var(--ease) both;
+    animation: fadeIn 0.35s var(--ease) both;
 }
 
 #gamesSection h3 {
@@ -522,20 +522,17 @@ footer {
 .loader-logo {
     width: 88px;
     border-radius: 22px;
-    animation: loaderGlow 1.2s ease-in-out infinite alternate;
-    box-shadow: 0 0 40px rgba(167, 139, 250, 0.35);
+    animation: loaderPulse 1.2s ease-in-out infinite alternate;
 }
 
 /* === KEYFRAME ANIMATIONS === */
-@keyframes loaderGlow {
+@keyframes loaderPulse {
     0% {
         transform: scale(1);
-        box-shadow: 0 0 28px rgba(167, 139, 250, 0.3);
     }
 
     100% {
         transform: scale(1.07);
-        box-shadow: 0 0 60px rgba(167, 139, 250, 0.6);
     }
 }
 
@@ -563,6 +560,16 @@ footer {
     }
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .focus-in-expand-fwd {
     animation: focusIn 1s var(--ease) both;
 }
@@ -583,7 +590,15 @@ footer {
 
 /* gradientShift kept for backward compat */
 @keyframes gradientShift {
-    0%   { background-position: 0% 50%; }
-    50%  { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }

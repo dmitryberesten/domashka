@@ -65,29 +65,24 @@
                             <span class="game-icon">🔤</span>
                             <span>Вгадай слово</span>
                         </a>
+                        <!-- alias тимчасово прихована
                         <a href="#" class="game-link" data-game="alias">
                             <span class="game-icon">🗣️</span>
                             <span>Еліас</span>
                         </a>
+                        -->
+                        <!-- bible-quiz тимчасово прихована
                         <a href="#" class="game-link" data-game="bible-quiz">
                             <span class="game-icon">📖</span>
                             <span>Вікторина</span>
                         </a>
+                        -->
+                        <!-- challenge тимчасово прихована
                         <a href="#" class="game-link" data-game="challenge">
                             <span class="game-icon">⚡</span>
                             <span>Добра справа</span>
                         </a>
-                    </div>
-
-                    <!-- Модальне вікно для ігор -->
-                    <div id="gameModal"
-                        style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:10000; align-items:center; justify-content:center;">
-                        <div id="gameModalContent"
-                            style="max-width:95vw; width:370px; min-height:180px; padding:24px 18px 18px 18px; position:relative;">
-                            <button id="closeGameModal"
-                                style="position:absolute; top:12px; right:12px;">&times;</button>
-                            <div id="gameContent"></div>
-                        </div>
+                        -->
                     </div>
                 </div>
 
@@ -110,6 +105,16 @@
             </footer>
         </div>
     </div>
+    <!-- Модальне вікно для ігор (пряме дитя body — position:fixed не ламається через transform батьків) -->
+    <div id="gameModal"
+        style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:10000; align-items:center; justify-content:center;">
+        <div id="gameModalContent"
+            style="max-width:92vw; width:370px; min-height:180px; padding:24px 18px 18px 18px; position:relative;">
+            <button id="closeGameModal" style="position:absolute; top:12px; right:12px;">&times;</button>
+            <div id="gameContent"></div>
+        </div>
+    </div>
+
     <script src="data.js"></script>
     <script src="domashka.js"></script>
 </body>
