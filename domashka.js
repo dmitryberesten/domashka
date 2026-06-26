@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
     showQrButton.style.display = "none";
     getVerseButton.style.display = "none";
     showQuestionGeneratorButton.style.display = "none";
-    backButton.style.display = "inline-block";
+    backButton.style.display = "flex";
     verseContainer.innerHTML = "";
     qrImage.style.display = "none";
     questionContainer.textContent = "";
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // (додаємо до вже існуючого backButton event)
   // --- Генератор Запитань для Обговорення ---
   const showQuestionGeneratorButton = document.getElementById(
-    "showQuestionGenerator"
+    "showQuestionGenerator",
   );
   const nextQuestionButton = document.getElementById("nextQuestion");
   const questionContainer = document.getElementById("questionContainer");
@@ -153,11 +153,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   showQuestionGeneratorButton.addEventListener("click", () => {
     questionContainer.textContent = getRandomQuestion();
-    nextQuestionButton.style.display = "inline-block";
+    nextQuestionButton.style.display = "flex";
     showQrButton.style.display = "none";
     getVerseButton.style.display = "none";
     showQuestionGeneratorButton.style.display = "none";
-    backButton.style.display = "inline-block";
+    backButton.style.display = "flex";
     verseContainer.innerHTML = "";
     qrImage.style.display = "none";
     showGamesButton.style.display = "none";
@@ -203,10 +203,10 @@ document.addEventListener("DOMContentLoaded", () => {
     qrImage.style.display = "none"; // Сховати QR-код при поверненні
     questionContainer.textContent = "";
     nextQuestionButton.style.display = "none";
-    showQuestionGeneratorButton.style.display = "inline-block";
+    showQuestionGeneratorButton.style.display = "flex";
     toggleButtons(true);
     gamesSection.style.display = "none";
-    showGamesButton.style.display = "inline-block";
+    showGamesButton.style.display = "flex";
     // Заглушки для переходу на ігри (можна замінити на реальні сторінки)
     gameLinks.forEach((link) => {
       link.addEventListener("click", (e) => {
@@ -222,8 +222,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Функція для показу/приховання кнопок
   function toggleButtons(showMain) {
-    showQrButton.style.display = showMain ? "inline-block" : "none";
-    getVerseButton.style.display = showMain ? "inline-block" : "none";
-    backButton.style.display = showMain ? "none" : "inline-block";
+    showQrButton.style.display = showMain ? "flex" : "none";
+    getVerseButton.style.display = showMain ? "flex" : "none";
+    backButton.style.display = showMain ? "none" : "flex";
   }
 });

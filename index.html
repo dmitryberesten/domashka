@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="domashka" />
     <title>Твоя Домашка</title>
     <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96" />
@@ -12,7 +13,9 @@
     <link rel="shortcut icon" href="./favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
     <link rel="manifest" href="./favicon/site.webmanifest" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -26,45 +29,85 @@
     <div id="content" style="display: none;">
         <header>
             <h1 class="focus-in-expand-fwd">Твоя Домашка</h1>
+            <p class="header-subtitle">Разом у вірі</p>
         </header>
         <div class="container">
             <main>
-                <button id="getVerse">Отримати Слово</button>
-                <button id="showQuestionGenerator">Запитання для обговорення</button>
-                <button id="nextQuestion" style="display:none;">Наступне питання</button>
-                <button id="showGames" style="display:inline-block;">Ігри для компанії</button>
-                <button id="showQr">Показати QR Code</button>
-                <div id="gamesSection" style="display:none; margin-top:1em;">
+                <button id="getVerse">
+                    <span class="btn-icon">✨</span>
+                    <span class="btn-text">Слово дня</span>
+                    <span class="btn-arrow">›</span>
+                </button>
+                <button id="showQuestionGenerator">
+                    <span class="btn-icon">💬</span>
+                    <span class="btn-text">Запитання для обговорення</span>
+                    <span class="btn-arrow">›</span>
+                </button>
+                <button id="nextQuestion" style="display:none;">
+                    <span class="btn-icon">🔄</span>
+                    <span class="btn-text">Наступне питання</span>
+                </button>
+                <button id="showGames" style="display:flex;">
+                    <span class="btn-icon">🎮</span>
+                    <span class="btn-text">Ігри для компанії</span>
+                    <span class="btn-arrow">›</span>
+                </button>
+                <button id="showQr">
+                    <span class="btn-icon">📲</span>
+                    <span class="btn-text">Показати QR Code</span>
+                    <span class="btn-arrow">›</span>
+                </button>
+
+                <div id="gamesSection" style="display:none;">
                     <h3>Ігри для домашки</h3>
-                    <div style="display:flex; flex-direction:column; gap:0.5em;">
-                        <a href="#" class="game-link" data-game="guess-word" style="padding:0.5em; background:#f0f0f0; border-radius:6px; text-align:center; text-decoration:none;">Вгадай слово</a>
-                        <a href="#" class="game-link" data-game="alias" style="padding:0.5em; background:#f0f0f0; border-radius:6px; text-align:center; text-decoration:none;">Еліас: поясни слово</a>
-                        <a href="#" class="game-link" data-game="bible-quiz" style="padding:0.5em; background:#f0f0f0; border-radius:6px; text-align:center; text-decoration:none;">Біблійна вікторина</a>
-                        <a href="#" class="game-link" data-game="challenge" style="padding:0.5em; background:#f0f0f0; border-radius:6px; text-align:center; text-decoration:none;">Добра справа</a>
+                    <div class="games-grid">
+                        <a href="#" class="game-link" data-game="guess-word">
+                            <span class="game-icon">🔤</span>
+                            <span>Вгадай слово</span>
+                        </a>
+                        <a href="#" class="game-link" data-game="alias">
+                            <span class="game-icon">🗣️</span>
+                            <span>Еліас</span>
+                        </a>
+                        <a href="#" class="game-link" data-game="bible-quiz">
+                            <span class="game-icon">📖</span>
+                            <span>Вікторина</span>
+                        </a>
+                        <a href="#" class="game-link" data-game="challenge">
+                            <span class="game-icon">⚡</span>
+                            <span>Добра справа</span>
+                        </a>
                     </div>
-                                    <!-- Модальне вікно для ігор -->
-                                    <div id="gameModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.25); z-index:10000; align-items:center; justify-content:center;">
-                                        <div id="gameModalContent" style="background:#fff; border-radius:16px; max-width:95vw; width:370px; min-height:180px; padding:24px 18px 18px 18px; box-shadow:0 8px 32px rgba(0,0,0,0.18); position:relative;">
-                                            <button id="closeGameModal" style="position:absolute; top:10px; right:10px; background:#f5576c; color:#fff; border:none; border-radius:7px; width:36px; height:36px; font-size:1.4em; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 8px rgba(245,87,108,0.12); transition:background 0.2s;">&times;</button>
-                                            <div id="gameContent"></div>
-                                        </div>
-                                    </div>
+
+                    <!-- Модальне вікно для ігор -->
+                    <div id="gameModal"
+                        style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:10000; align-items:center; justify-content:center;">
+                        <div id="gameModalContent"
+                            style="max-width:95vw; width:370px; min-height:180px; padding:24px 18px 18px 18px; position:relative;">
+                            <button id="closeGameModal"
+                                style="position:absolute; top:12px; right:12px;">&times;</button>
+                            <div id="gameContent"></div>
+                        </div>
+                    </div>
                 </div>
-                <div id="questionContainer" style="margin-top: 1em; font-weight: bold;"></div>
+
+                <div id="questionContainer"></div>
                 <div id="verseContainer"></div>
                 <img id="qrImage" src="qr-code.png" alt="QR Code" style="display: none;">
-                <button id="backButton" style="display: none;">Назад</button>
+                <button id="backButton" style="display: none;">
+                    <span class="btn-icon">←</span>
+                    <span class="btn-text">Назад</span>
+                </button>
             </main>
         </div>
 
         <div class="tracking-in-expand-fwd-bottom">
             <footer>
-                <p class="footer-text">Developed by <a
-                        href="https://www.instagram.com/dmitry_beresten" target="_blank">Dima
+                <p class="footer-text">Developed by <a href="https://www.instagram.com/dmitry_beresten"
+                        target="_blank">Dima
                         Beresten</a></p>
                 <p class="footer-version">Version 1.0</p>
             </footer>
-
         </div>
     </div>
     <script src="data.js"></script>
